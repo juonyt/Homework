@@ -1,0 +1,525 @@
+
+
+Which of the following statements are correct about the status of the Http response? Select the one correct answer
+A.      A status of 200 to 299 signifies that the request was successful.
+B.      A status of 300 to 399 is informational messages.
+C.      A status of 400 to 499 indicates an error in the server
+D.      A status of 500 to 599 indicates an error in the client.
+------------------------------------------------------------------------
+
+
+Classes HttpServlet and GenericServlet implement the ___________interface.
+A.      Servlet
+B.      Http
+C.      HttpServletRequest
+D.      HttpServletResponse
+------------------------------------------------------------------------
+
+
+The HttpSession method getAttribute returns the object associated with a particular name.
+A.      True
+B.      False
+------------------------------------------------------------------------
+
+
+HttpSession objects live on the server.
+A.      True
+B.      False
+------------------------------------------------------------------------
+
+
+You have to send a gif image to the client as a response to a request. Which of the following calls will you have to make? (Choose one)
+A.      response.setContentType("image/gif");
+B.      response.setType("application/gif");
+C.      response.setContentType("application/bin");
+D.      response.setType("image/gif");
+------------------------------------------------------------------------
+
+
+Sessions will automatically become inactive when the amount of time between client accesses exceeds the interval specified by getMaxInactiveInterval.
+A.      True
+B.      False
+------------------------------------------------------------------------
+
+
+Consider the code of ReportServlet servlet of a web application. Assuming generateReport() is valid method and have no problems, which of the following statement about these servlet is true?
+
+
+A.      ReportServlet will throw exception at runtime.
+B.      ReportServlet.java won't compile.
+C.      ReportServlet.java  will compile and run without any problems.
+------------------------------------------------------------------------
+
+
+Which method of ReportGeneratorServlet will be called when the user clicks on the URL shown by the following HTML.
+Assume that ReportGeneratorServlet does not override the service(HttpServletRequest, HttpServletResponse) method of the HttpServlet class.
+ (Choose one)
+A.      doGet(HttpServletRequest, HttpServletResponse);
+B.      doPost(HttpServletRequest, HttpServletResponse);
+C.      doHead(HttpServletRequest, HttpServletResponse);
+D.      doOption(HttpServletRequest, HttpServletResponse);
+------------------------------------------------------------------------
+
+
+HttpSession objects have a built-in data structure that lets you store any number of keys and associated values.
+A.      True
+B.      False
+------------------------------------------------------------------------
+
+
+What will be the outcome of executing the following code?
+
+public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+              response.setContentType("text/plain");
+              response.setContentLength(6);
+              PrintWriter out = response.getWriter();
+              out.write("What's your name? ");
+              out.write("" + response.isCommitted());
+}
+A.      Won't execute because of a compilation error.
+B.      An IllegalArgumentException is thrown.
+C.      An IllegalStateException is thrown.
+D.      A blank page is returned to the client.
+E.      "What's" is returned to the client.
+F.      "What's your name?" is returned to the client.
+------------------------------------------------------------------------
+
+
+Following is the code for doGet() and doPost() methods of TestServlet.
+Which of the statement is correct?
+
+A.      This will only work for HTTP GET requests
+B.      This will only work for HTTP POST requests
+C.      This will work for HTTP GET as well as POST requests.
+D.      It'll throw an exception at runtime, as you cannot call doGet() from doPost().
+E.      It'll throw an exception at runtime only if a POST request is sent to it.
+------------------------------------------------------------------------
+
+
+Which of the following is indicated by URL, which is used on the Internet?
+A.      Information resources(sources) on the Internet
+B.      E-mail addresses for use in the Internet
+C.      IP addresses of servers connected to the Internet
+D.      Owners of PCs connected to the Internet
+------------------------------------------------------------------------
+
+
+Browsers typically cache the server’s response to a POST request.
+A.      True
+B.      False
+------------------------------------------------------------------------
+
+
+Identify correct statement about a WAR file.(Choose one)
+A.      It is an XML document.
+B.      It cannot be unpackaged by the container.
+C.      It is used by web application developer to deliver the web application in a single unit.
+D.      It contains web components such as servlets as well as EJBs.
+------------------------------------------------------------------------
+
+
+Host names are translated into IP addresses by web servers.
+A.      True
+B.      False
+------------------------------------------------------------------------
+
+
+See the extract from web.xml of web application “mywebapp” on server named myserver, runs on port 8080:
+
+<servlet-mapping>
+          <servlet-name>ServletA</servlet-name>
+          <url-pattern>/</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+          <servlet-name>ServletB</servlet-name>
+          <url-pattern>/bservlet.html</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+          <servlet-name>ServletC</servlet-name>
+          <url-pattern>*.servletC</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+          <servlet-name>ServletD</servlet-name>
+          <url-pattern>/dservlet/*</url-pattern>
+</servlet-mapping>
+
+Given that a user enters the following into her browser, which (if any) of the mapped servlets will execute? (Choose one.)
+
+http://myserver:8080/mywebapp
+A.      ServletA
+B.      ServletB
+C.      ServletC
+D.      ServletD
+------------------------------------------------------------------------
+
+
+A parameter is defined in a <context-param> element of the deployment descriptor for a web application. Which of the following statements is correct?
+A.      It is accessible to all the servlets of the webapp.
+B.      It is accessible to all the servlets of all the webapps of the container.
+C.      It is accessible only to the servlet it is defined for.
+------------------------------------------------------------------------
+
+
+A ……………….. manages the threading for the servlets and JSPs and provides the necessary interface with the Web server.    
+A.      Web Container
+B.      EJB Container
+C.      Servlets
+D.      Applets
+------------------------------------------------------------------------
+
+
+A ________has a name, a single value, and optional attributes such as a comment, path and domain qualifiers, a maximum age, and a version number.
+A.      Cookie
+B.      Session
+C.      Request
+D.      Response
+------------------------------------------------------------------------
+
+
+Which of the following method calls can be used to retrieve an object from the session that was stored using the name "roleName"?
+A.      getObject("roleName");
+B.      getValue("roleName");
+C.      get("roleName");
+D.      getAttribute("roleName");
+E.      getParameter("roleName");
+------------------------------------------------------------------------
+
+
+Which is NOT a standard technique for a session be definitely invalidated?
+A.      The container is shutdown and brought up again.
+B.      No request comes from the client for more than "session timeout" period.
+C.      A servlet explicitly calls invalidate() on a session object.
+D.      If the session time out is set to 0 using setMaxInactiveInterval() method.
+------------------------------------------------------------------------
+
+
+Which method can be invoked on a session object so that it is never invalidated by the servlet container automatically? 
+A.      setMaxInactiveInterval(-1)
+B.      setTimeOut(Integer.MAX_INT)
+C.      setMaxInactiveInterval(Integer.MAX_INT)
+D.      setTimeOut(-1)
+------------------------------------------------------------------------
+
+
+Session death is more likely to come about through a time-out mechanism. If there is no activity on a session for a predefined length of time, the web container invalidates the session.
+A.      True
+B.      False
+------------------------------------------------------------------------
+
+
+What are the different scope values for the ‹jsp:useBean›? (Choose one correct answer)
+A.      session, page, application, request
+B.      session, page, application, global
+C.      session, page, application, context
+D.      session, page, response, request
+------------------------------------------------------------------------
+
+
+A JSP page called test.jsp is passed a parameter name in the URL using http://localhost/Final/test.jsp?name=John. The test.jsp contains the following code.
+
+<% String myName=request.getParameter("name");%>
+<% String test= "Welcome  " + myName; %>
+<%=test%>
+
+What is the output?
+A.      The page display "Welcome John"
+B.      The program gives a syntax error because of the statement
+<% String myName=request.getParameter("name");%>
+C.      The program gives a syntax error because of the statement
+<% String test= "Welcome " + myName; %>
+D.      The program gives a syntax error because of the statement
+<%=test%>
+------------------------------------------------------------------------
+
+
+Name the default value of the scope attribute of <jsp:useBean>
+A.      page
+B.      session
+C.      application
+D.      request
+------------------------------------------------------------------------
+
+
+A JSP page called test.jsp is passed a parameter name in the URL using http://localhost/test.jsp?name="John". The test.jsp contains the following code.
+
+<%! String myName=request.getParameter();%>
+<% String test= "welcome" + myName; %>
+<%= test%>
+
+What is the output?
+A.      The program prints "Welcome John"
+B.      The program gives a syntax error because of the statement  <%! String myName=request.getParameter();%>
+C.      The program gives a syntax error because of the statement <% String test= "welcome" + myName; %>
+D.      The program gives a syntax error because of the statement <%= test%>
+------------------------------------------------------------------------
+
+
+What is the output of the following code snippet of a JSP page?
+
+ ${empty""}<br>
+ ${empty"sometext"}
+A.      true
+false
+B.      false
+true
+C.      true
+D.      false
+------------------------------------------------------------------------
+
+
+Select the correct directive statement insert into the first line of following lines of code (1 insert code here):
+
+
+A.      <%@page import='java.util.*' %>
+B.      <%@import package='java.util.*' %>
+C.      <%@ package import ='java.util.*' %>
+D.      <%! page import='java.util.*' %>
+------------------------------------------------------------------------
+
+
+For JSP scopes of request and page, what type of object is used to store the attributes?
+A.      HttpServletRequest and ServletContext respectively.
+B.      ServletRequest and ServletConfig respectively.
+C.      ServletRequest and PageContext respectively.
+D.      HttpServletRequest and PageContext respectively.
+E.      ServletConfig for both.
+------------------------------------------------------------------------
+
+
+Which of the following correctly represents the following JSP statement? Select one correct answer.
+<%=x%>
+A.      <jsp:expression=x/>
+B.      <jsp:expression>x</jsp:expression>
+C.      <jsp:statement>x</jsp:statement>
+D.      <jsp:declaration>x</jsp:declaration>
+E.      <jsp:scriptlet>x</jsp:scriptlet>
+------------------------------------------------------------------------
+
+
+What gets printed when the following JSP code is invoked in a browser? Select one correct answer.
+<%= if(Math.random() < 0.5) %>
+  hello
+<%= } else { %>
+  hi
+<%= } %>
+A.      The browser will print either hello or hi based upon the return value of random.
+B.      The string hello will always get printed.
+C.      The string hi will always get printed.
+D.      The JSP file will not compile.
+------------------------------------------------------------------------
+
+
+Which technique is likely to return an initialization parameter for a JSP page?
+A.      <%= request.getParameter("myParm") %>
+B.      <% String s = getInitParameter("myParm"); %>
+C.      <% = application.getInitParameter("myParm") %>
+D.      <%= getParameter("myParm") %>
+E.      <% String s = getAttribute("myParm"); %>
+------------------------------------------------------------------------
+
+
+A JSP ________________ lets you define methods or fields that get inserted into the main body of the servlet class (outside of the _jspService method that is called by service to process the request).
+A.      declaration
+B.      scriptlet
+C.      expression
+------------------------------------------------------------------------
+
+
+Which jsp tag can be used to set bean property?
+A.      jsp:useBean
+B.      jsp:useBean.property
+C.      jsp:useBean.setProperty
+D.      jsp:property
+E.      jsp:setProperty
+------------------------------------------------------------------------
+
+
+Which statements are BEST describe param attribute of <jsp:setProperty param=…. /> Action?
+A.      The ID of the JavaBean for which a property (or properties) will be set.
+B.      The name of the property to set. Specifying "*" for this attribute causes the JSP to match the request parameters to the properties of the bean.
+C.      If request parameter names do not match bean property names, this attribute can be used to specify which request parameter should be used to obtain the value for a specific bean property.
+D.      The value to assign to a bean property. The value typically is the result of a JSP expression.
+------------------------------------------------------------------------
+
+
+Which statements are BEST describe value attribute of <jsp:setProperty value=… /> action?
+A.      The ID of the JavaBean for which a property (or properties) will be set.
+B.      The name of the property to set. Specifying "*" for this attribute causes the JSP to match the request parameters to the properties of the bean.
+C.      If request parameter names do not match bean property names, this attribute can be used to specify which request parameter should be used to obtain the value for a specific bean property.
+D.      The value to assign to a bean property. The value typically is the result of a JSP expression.
+------------------------------------------------------------------------
+
+
+Which statements are BEST describe contentType attribute of <%@ page contentType=….%> directive?
+A.      Any exceptions in the current page that are not caught are sent to the error page for processing. The error page implicit object exception references the original exception.
+B.      Specifies if the current page is an error page that will be invoked in response to an error on another page. If the attribute value is true, the implicit object exception is created and references the original exception that occurred.
+C.      Specifies the MIME type of the data in the response to the client. The default type is text/html.
+D.      Specifies the class from which the translated JSP will be inherited. This attribute must be a fully qualified package and class name.
+------------------------------------------------------------------------
+
+
+Which statements are BEST describe id attribute of <jsp:useBean id=….. /> Action?
+A.      The name used to manipulate the Java object with actions <jsp:setProperty> and <jsp:getProperty>. A variable of this name is also declared for use in JSP scripting elements. The name specified here is case sensitive.
+B.      The scope in which the Java object is accessible—page, request, session or application. The default scope is page.
+C.      The fully qualified class name of the Java object.
+D.      The name of a bean that can be used with method instantiate of class java.beans.Beans to load a JavaBean into memory.
+E.      The type of the JavaBean. This can be the same type as the class attribute, a superclass of that type or an interface implemented by that type. The default value is the same as for attribute class. A ClassCastException occurs if the Java object is not of the type specified with attribute type.
+------------------------------------------------------------------------
+
+
+Which statements are BEST describe errorPage attribute of <%@ page errorPage=….%> directive?
+A.      Any exceptions in the current page that are not caught are sent to the error page for processing. The error page implicit object exception references the original exception.
+B.      Specifies if the current page is an error page that will be invoked in response to an error on another page. If the attribute value is true, the implicit object exception is created and references the original exception that occurred.
+C.      Specifies the MIME type of the data in the response to the client. The default type is text/html.
+D.      Specifies the class from which the translated JSP will be inherited. This attribute must be a fully qualified package and class name.
+------------------------------------------------------------------------
+
+
+Action _______has the ability to match request parameters to properties of the same name in a bean by specifying "*" for attribute property.
+A.      <jsp:setProperty>
+B.      <jsp:getProperty>
+C.      <jsp:useBean>
+D.      <jsp:include>
+------------------------------------------------------------------------
+
+
+Which of the following are potentially legal lines of JSP source?
+A.      <jsp:useBean id="beanName1" class="a.b.MyBean" type="a.b.MyInterface" />
+B.      <% String className = "a.b.MyBean"; %>
+<jsp:useBean id="beanName2" class="<%=className%>" />
+C.      <% String beanName = "beanName3"; %>
+<jsp:useBean id="<%=beanName3%>" class="a.b.MyBean" />
+D.      <% String propName = "soleProp"; %>
+<jsp:getProperty name="beanName1" property="<%=propName%>" />
+/>
+------------------------------------------------------------------------
+
+
+What sub element of <attribute> tag defines the name of the attribute that might be passed to the tag handler? (Choose one)
+A.      <attribute-name>
+B.      <name>
+C.      <attributename>
+D.      <param-name>
+------------------------------------------------------------------------
+
+
+What should be the value of <body-content> subelement of element <tag> in a TLD file if the tag should not have any contents as its body?
+A.      blank
+B.      empty
+C.      null
+D.      false
+------------------------------------------------------------------------
+
+
+Identify the correct element is required for a valid <taglib> tag in web.xml (Choose one)
+A.      <uri>
+B.      <tag-uri>
+C.      <uri-name>
+D.      <uri-location>
+E.      <taglib-uri>
+------------------------------------------------------------------------
+
+
+Given the following JSP and tag handler code, what is the result of accessing the JSP?
+
+JSP Page Source
+<html>
+<body>
+    <%@taglib uri="test_taglib" prefix="myTag"%>
+    <% session.setAttribute("first", "first"); %>
+    <myTag:TestTag/>
+    <br>
+    <%=session.getAttribute("second")%>
+</body>
+</html>
+
+Tag Handler Code for <myTag:TestTag />
+
+package examples;
+import java.io.*;
+import javax.servlet.jsp.*;
+import javax.servlet.jsp.tagext.*;
+
+public class TestTag extends TagSupport
+{
+        private PageContext pageContext;
+        public void setPageContext(PageContext page){
+                        this.pageContext=page;
+        }
+
+        public int doStartTag() throws JspException     {
+                try{
+                        String first=pageContext.getSession().getAttribute("first").toString();
+                        pageContext.getOut().write(first);
+                        pageContext.setAttribute("second", "second",PageContext.PAGE_SCOPE);
+                }
+                catch(IOException i)
+                {
+                        throw new JspException(i.getMessage());
+                }
+                return SKIP_BODY;
+        }
+
+        public int doEndTag() throws JspException{
+                return EVAL_PAGE;
+        }
+        public void release(){}
+
+}
+
+
+Assume *.tld and web.xml files are correct.
+A.      first
+null
+B.      second
+null
+C.      first
+second
+D.      second
+first
+------------------------------------------------------------------------
+
+
+Which of these is legal return types of the doAfterBody method defined in a class that extends TagSupport class?.
+A.      EVAL_PAGE
+B.      EVAL_BODY
+C.      EVAL_PAGE_AGAIN
+D.      SKIP_BODY
+E.      SKIP_PAGE
+------------------------------------------------------------------------
+
+
+Which of the following elements defines the properties of an attribute that a tag needs?
+A.      attribute
+B.      tag-attribute
+C.      tag-attribute-type
+D.      attribute-type
+------------------------------------------------------------------------
+
+
+Which element defined within the taglib element of taglib descriptor file is required? Select one correct answer.
+A.      Tag
+B.      Description
+C.      Validator
+D.      Name
+------------------------------------------------------------------------
+
+
+Which of the following is a properly formatted taglib element occurring in web.xml?
+A.      <taglib>
+ <uri>/graph</uri>
+ <location>/WEB-INF/Charts.tld</location>
+</taglib>
+B.      <taglib>
+ <lib-uri>/graph</lib-uri>
+ <lib-location>/WEB-INF/Charts.tld</lib-location>
+</taglib>
+C.      <taglib>
+ <taglib-name>/graph</taglib-name>
+ <taglib-location>/WEB-INF/Charts.tld</taglib-location>
+</taglib>
+D.      <taglib>
+ <taglib-uri>/graph</taglib-uri>
+ <taglib-location>/WEB-INF/Charts.tld</taglib-location>
+</taglib>
+------------------------------------------------------------------------

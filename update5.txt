@@ -1,0 +1,93 @@
+﻿What Server Manager tool allows you to create a new virtual hard disk (VHD)? | Hyper-V Manager 
+When creating a new VHD, what feature does Windows PowerShell offer that the graphical interface does not? | You can specify the block size and the logical sector sizes
+Do VMs ever directly access a physical hard disk? | Yes, VMs access a physical hard disk by way of a "pass-through disk," a special virtual disk that directly accesses the physical disk if it is made exclusively available to the VM. 
+What is the maximum number of ports supported by a Hyper-V virtual switch? | Unlimited 
+Which of the following virtual switch types does not enable guest OSs to communicate with the parent partition? | Private 
+How many dynamically assigned MAC addresses can a Hyper-V server provide by default? | 256 
+You can create virtual switches after what role is installed? | Hyper-V 
+How do you create a virtual switch for the purpose of isolating virtual machines (VMs) from the external network and the host operating system? | You create a private virtual switch. 
+Which is faster, synthetic adapters or emulated adapters? | Synthetic, because it uses the VMBus 
+Which of the following is the primary method for transmitting IPv6 traffic over an IPv4 network? | Tunneling 
+Which of the following is the IPv6 equivalent to a private IPv4 address? | Unique local unicast address 
+Which of the following is an automatic tunneling protocol used by Windows operating systems that are located behind NAT routers? | Teredo 
+How does Classless Inter-Domain Routing (CIDR) help reduce waste of IP addresses? | Uses a subnetting method that divides between network bits and host bits anywhere, not just between octets 
+There are three alternatives to assigning an IPv4 address. Two are manual configuration and DHCP. What is the third? | Automatic Private IP Addressing (APIPA) 
+Instead of the four 8-bit decimal numbers separated by periods that IPv4 uses, IPv6 addresses use a notation called | colon-hexadecimal format 
+Which of the following DHCP infrastructure designs requires the largest number of DHCP server implementations? | distributed 
+Which of the following types of DHCP address allocation is the equivalent of a reservation in Windows Server 2012? |  manual allocation 
+At which layer of the OSI model does DHCP operate? | Application layer 
+A DHCP client first attempts to reacquire its lease at half the lease time, which is known as: | T1 
+The following is an administrative grouping of scopes that is used to support multiple logical subnets on a single network segment: | superscope 
+The following is a hexadecimal address that is uniquely associated with a specific Network Interface Card (NIC): | MAC 
+Which of the following is not one of the elements of the Domain Name System (DNS)?  | relay agents 
+What is the maximum length for a fully qualified domain name, including the trailing period? | 255 characters 
+Which of the following would be the correct FQDN for a resource record in a reverse lookup zone, if the computer's IP address is 10.75.143.88? | 88.143.75.10.in-addr.arpa 
+In the fully qualified domain name www.sales.contoso.com, which of the following is the second-level domain? | contoso 
+The IPv6 DNS host record is referred to as a(n): | AAAA record 
+A DNS server that hosts a primary or secondary zone containing a particular record can issue the following response to a query for that record: | Authoritative answer 
+Data from a primary zone is transmitted to secondary zones using the following: | Zone transfer 
+Which of the following items is a valid leaf object in Active Directory? | User 
+What is required by DNS for Active Directory to function? | SRV records support 
+What is the first domain installed in a new Active Directory forest called? | Forest root domain 
+Which of the following cannot contain multiple Active Directory domains? | organizational units 
+What are the two basic classes of Active Directory objects? | Leaf, Container 
+Which of the following is not a reason why you should try to create as few domains as possible when designing an Active Directory infrastructure? | You must purchase a license from Microsoft for each domain you create. 
+Which of the following does an Active Directory client use to locate objects in another domain? | Global Catalog 
+What is the default trust relationship between domains in one forest? | Two-way trust relationship between domain trees 
+What is an important difference between groups and organizational units (OUs)? | Group memberships are independent of the domain's tree structure. 
+What can be used to add, delete, or modify objects in Active Directory, in addition to modifying the schema if necessary? | LDIFDE 
+When using CSVDE, what is the first line of the text file that uses proper attribute names? header record 
+Which of the following utilities do you use to perform an offline domain join? | djoin 
+Which of the following is not a type of user account that can be configured in Windows Server 2012? | network accounts 
+Which of the following are the two built-in user accounts created automatically on a computer running Windows Server 2012? | Administrator, Guest 
+What is the PowerShell cmdlet syntax for creating a new user account? | New-ADUser 
+What is the PowerShell cmdlet syntax for creating a new computer object | New-ADComputer -Name <computer name> -path <distinguished name> 
+When using Netdom.exe to join an account, you may add the parameter [/OU:OUDN]. If this parameter is left out, where is the object placed? | In the Computers container |
+Who may join a computer to the domain? | Members of the computer's local Administrators group may join the computer to the domain. |
+What are the minimum system memory requirements to run all editions of Windows Server 2012? | 512 MB RAM 
+What Windows Server 2012 role would you install to provide network resources to remote users? | Remote Access 
+What is the next step after creating a virtual hard disk (VHD)? | Initializing the disk and creating volumes on it, just as you would a physical disk 
+Knowing how permissions can be cumulative or override each other is an important factor in understanding what? | Understanding effective access 
+What basic printer permission do you grant a user to be able to pause, resume, restart and cancel their own print jobs, as well as the print jobs of others? | Manage documents|
+If an administrator wants to install additional roles along with Hyper-V, what does Microsoft recommend the administrator do? | Microsoft recommends that you install other roles on one of the VMs you create with Hyper-V
+A virtual machine configuration (.vmc) file in XML format and virtual hard disk (.vhd or .vhdx) files for the guest OS and data|What are the two files used for every VM?
+Can you modify an existing VHD file? | Yes, you can even modify it without mounting it to a VM| 
+ What does a double-colon in an IPv6 address signify? | Two consecutive 8-bit blocks of zeros
+Which of the following is not one of the techniques you can use to provide fault tolerance for DHCP servers? | DHCP servers using identical scopes|
+Which of the following DHCP message types is sent first in process of obtaining an address lease? | DHCPDISCOVER 
+Which of the following are types of zone transfers supported by the DNS server in Windows Server 2012? | full zone transfers, incremental zone transfers |
+Which of the following is used to boot a computer over the network? | PXE 
+Which two roles are available in WDS? | Deployment server, Transport Server 
+The answer file is made as a(n) _____ file. | XML 
+Which command allows you to modify an offline image? | DISM 
+Which of the following is the filename extension for install images and boot images? | WIM 
+Which of the following is used to load a minimum version of Windows to troubleshooting and installation? | Windows PE 
+Which of the following are necessary for deploying WDS? | AD DS, DHCP, DNS 
+Which of the following allows you to package drivers together and deploy them with images? | Dynamic Driver Provisioning 
+Which program is used to remove the computer name and SID from a computer? | System Preparation Utility 
+Which of the following is used to convert a master computer to an image file? | Windows Deployment Service Capture utility 
+To specify which computers get which updates, into which of the following categories should you divide the computers? | Computer groups 
+Which of the following WSUS modes has upstream WSUS servers share updates and the approval of updates with WSUS downstream servers? | 
+Client-side targeting |Which term best describes when computers are automatically assigned to a computer group using group policies or by modifying the registry? | Replica 
+Which of the following is the default database used by WSUS? | WID 
+If a client is not part of a domain, client-side targeting can be accomplished by doing which of the following? | By modifying the registry 
+Which term best describes multiple hotfixes, security updates, and critical updates which are packaged together and thoroughly tested together? | Service pack 
+Which of the following is the default port used for synchronization? | 8530 
+Which of the following is the process of downloading updates for a WSUS server? | Synchronization 
+Which of the following is required in order to view reports in WSUS? | Microsoft Report Viewer 2008 Redistributable 
+Which of the following is the best strategy for getting all clients within an organization to use a WSUS server? | Use group policies
+Which of the following is the primary tool to add or remove server roles? | Server Manager 
+Which of the following is used to modify a task after you add a basic task to an Event Viewer? | Task Scheduler
+Which program allows you to stop a running process? | Task Manager 
+Which program allows you to determine what processes are using which network connections? | netstat 
+Which of the following is used to view the Windows logs? | Event Viewer
+When you are troubleshooting a problem and decide to use the Event Viewer, which of the following should be used to help you focus on a reduced set of events? | filters 
+Which of the following allows you to view events from multiple computers using the Event Viewer? | subscriptions 
+Which program is used to determine what process is using a file? | Resource Monitor 
+Which of the following is used to group multiple performance counters so that they can be used over and over in Performance Monitor? | Data Collector Sets 
+Which command is used to configure a collecting computer to receive an event subscription? | wecutil qc 
+What is the default quota size of the Conflict and Deleted folder? | 660 MB 
+What are the two types of DFS Namespace? | Domain-based namespace, Stand-alone namespace 
+What is an ordered list of servers and targets that a client computer receives from a domain controller or namespace server when a user accesses a namespace root or a DFS folder with targets? | Referrals 
+Which of the following is a shared folder of shared folders? | DFS Namespace 
+How many target folders can you have for each namespace in Windows Server 2008 mode? | 50,000 
